@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/admin_header') %>
+    <link rel="stylesheet" href="/stylesheets/admin-save.css">
+    <title><%= title %></title>
+</head>
+<body>
+    <div class="container">
+        <%- include('partials/admin_nav.ejs') %>
+        <form class="form-register" action="/admin/edit/products/update/<%= prod._id %>" method="POST">
+            <h3><%= title %></h3> 
+            <input class="controls" type="text" name="name"  id="nombres" placeholder="Ingrese el nombre del producto" required value="<%= prod.name %>"><br>
+            <input class="controls" type="text" name="url"  id="url" placeholder="Ingrese la url de la imagen" required value="<%= prod.url %>"> <a class="btn btn-success" id="cloudy">O subir imagen</a>
+            <!-- <input class="controls" type="text" name="category"  id="categorias" placeholder="Categoría a la que pertenece"><br> -->
+            <input class="controls" type="number" name="price"  id="precios" placeholder="Ingrese el precio" required value="<%= prod.price %>"><br>
+            <input class="controls" type="text" name="description"  id="descripcion" placeholder="Descripción del producto" required value="<%= prod.description %>"><br>
+
+            <button class="btn btn-primary" type="submit"><i class="fas fa-save"></i>    Actualizar</button>
+            <a class="btn btn-danger" href="/admin/view/products"><i class="fas fa-window-close"></i>    Cancelar</a>
+        </form>
+    </div>
+    <br><br><br><br>
+
+    <%- include('partials/cloudinary')%>
+</body>
+</html>

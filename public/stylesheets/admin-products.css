@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('/images/fondo2.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container{
+    width: 80%;
+    padding-top: 4em;
+}
+
+.table{
+    width: 100%;
+}
+.img__cont{
+    height: 100px;
+    min-width: 100px;
+    max-width: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 50%;
+}
+
+.img__cont > img{
+    width: 100%;
+    max-height: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.btn{
+    width: 90%;
+    margin: 8px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th, td{
+    text-align: center;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+
+    <%- include('partials/recursosExternos') %>
+    <%- include('partials/head') %>
+</head>
+<body>
+    <%-include('partials/navigation') %>
+    <br>
+
+    <div class="container carrito bg-dark">
+        <table class="table table-dark table-hover">
+            <thead>
+              <tr class="text-primary">
+                <th scope="col"><i class="fas fa-shopping-cart"></i></th>
+                <th scope="col"></th>
+                <th scope="col">Producto</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Descripción</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% data.forEach(function(prod){ %>
+                <tr>
+                  <th scope="row"></th>
+                  <td class="table__productos">
+                      <!-- <img src="<%= prod.url %>" alt=""> -->
+                      <div class="container img__cont">
+                        <img src="<%= prod.url %>" alt="">
+                      </div>
+                  </td>
+                  <td><h6 class="title"><%= prod.name %></h6></td>
+                  <td>S/. <%= prod.price %></td>
+                  <td><%= prod.description %></td>
+                  <td>
+                    <a class="btn btn-danger" href="/shoppingcart/delete/<%= prod._id%>"><i class="fas fa-minus-circle"></i></a>
+                  </td>
+                </tr>
+              <% }); %>
+            </tbody>
+          </table>
+    </div>
+    <br>
+
+    <%- include('partials/footer.ejs') %>
+</body>
+</html>

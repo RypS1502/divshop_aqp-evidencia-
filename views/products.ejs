@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+
+    <%- include('partials/recursosExternos.ejs') %>
+
+    <%- include('partials/head.ejs') %>
+    
+</head>
+<body>
+    <%- include('partials/navigation.ejs') %>
+
+    <br>
+    <div class="container tag__container">
+        <div class="tags bg-dark">Todo</div>
+        <div class="tags bg-dark">Pc</div>
+        <div class="tags bg-dark">Laptop</div>
+        <div class="tags bg-dark">Componentes</div>
+        <div class="tags bg-dark">Otros</div>
+    </div> <br>
+    <div class="row row-cols-lg-5 card-container ">
+
+        <% data.forEach(function(prod){ %>
+            <div class="card m-2 card-product">
+                <!-- <img src="<%= prod.url %>" alt="..." class="card-img-top"> -->
+                <div class="card__img-container">
+                    <img src="<%= prod.url %>" alt="..." class="card-img-top">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <%= prod.name %>
+                    </h5>
+                    <p class="card-text">$ <span><%= prod.price %></span> </p>
+                    <a href="/shoppingcart/add/<%= prod._id %>" class="btn btn-dark btn-lg btn-block">
+                        Añadir
+                    </a>
+                </div>
+            </div>
+        <% }); %>
+
+    </div> <br>
+
+    <%- include('partials/footer.ejs') %>
+</body>
+</html>

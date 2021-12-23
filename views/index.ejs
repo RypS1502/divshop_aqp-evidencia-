@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+
+    <%- include('partials/recursosExternos.ejs') %>
+    
+    <%- include('partials/head.ejs') %>
+</head>
+
+<body>
+
+    <%- include('partials/navigation.ejs') %>
+
+    <div class="container">
+        <header class="row">
+            <div class="col-lg-12 text-center">
+                <img src="/images/irys.png" alt="IRyS" id="mainImg">
+            </div>
+        </header>
+    </div>
+
+    <!--Section one-->
+
+    <div class="container-fluid" id="about">
+        <div class="row bg-dark text-white p-5 text-center">
+            <div class="col-sm-6">
+                <!-- <i class="fab fa-youtube fa-3x"></i> -->
+                <img src="/images/logo_div.png" alt="" id="logoMainImg">
+            </div>
+            <div class="col-sm-6">
+                <h3>¡Bienvenido!</h3> <br>
+                <p> DivShopAqp es una tienda en línea de artículos, accesorios, equipos de cómputo y todo lo relacionado a tecnología pensada en las necesidades y el alcance del usuario. <br>Esta tienda está pensada para la compra de equipos o artículos tecnológicos facilitando el proceso de búsqueda, compra y entrega.</p>
+            </div>
+        </div>
+    </div>
+
+    <%- include('partials/footer.ejs') %>
+</body>
+
+
+</html>

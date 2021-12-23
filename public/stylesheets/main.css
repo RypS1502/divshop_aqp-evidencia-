@@ -1,0 +1,106 @@
+body {
+    background: #7F7FD5;
+    background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+    background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+}
+nav{
+    width: 100%;
+}
+#mainImg{
+    /* width: 70vw; */
+    width: 45vw;
+}
+
+#contactImg{
+    width: 20vw;
+}
+#logoMainImg{
+    width: 35%;
+}
+#about{
+    width: 100%;
+}
+#logoAboutImg{
+    width: 100%;
+}
+.card{
+    padding: 0;
+    text-align: center;
+}
+
+.card-product{
+    background-color: #ffffffb9;
+}
+
+.card-container{
+    max-width: 75vw;
+    margin: auto;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.card__img-container{
+    height: 120px;
+    min-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.card__img-container > img{
+    height: 100%;
+    max-height: 100%;
+    min-height: 100%;
+    object-fit: cover
+}
+.card-title{
+    display: inline-block;
+    min-height: 35px;
+    max-height: 35px;
+    height: 35px;
+    overflow: hidden;
+    font-size: 0.9em;
+}
+.tag__container{
+    text-align: center;
+}
+.tags{
+    color: white;
+    display: inline-block;
+    padding: 10px 20px;
+}
+.tags:hover{
+    cursor: pointer;
+}
+
+.carrito{
+    min-height: 80vh;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .table__productos{
+    display: flex;
+  }
+  .table__productos > img{
+    width: 4rem;
+    object-fit: contain;
+    border-radius: 6px;
+    margin-right: 20px;
+  }
+
+  .img__cont{
+    height: 100px;
+    min-width: 100px;
+    max-width: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 50%;
+    padding: 0px;
+}
+
+.img__cont > img{
+    width: 100%;
+    max-height: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}

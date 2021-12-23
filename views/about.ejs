@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+
+    <%- include('partials/recursosExternos.ejs') %>
+    
+    <%- include('partials/head.ejs') %>
+</head>
+<body>
+    <%- include('partials/navigation.ejs') %>
+    <br>
+    <div class="container text-center">
+        <h1>Acerca de nosotros</h1>
+        <div class="row p-5 text-center">
+            <div class="col-sm-6">
+                <!-- <i class="fab fa-youtube fa-3x"></i> -->
+                <img src="/images/logo_div.png" alt="" id="logoAboutImg">
+            </div>
+            <div class="col-sm-6"> <br> <br>
+                <h2>¡Hola!</h2> <br> <br>
+                <p><b>Somos una empresa creada a mediados del año 2021, nuestro misión es llevarle los mejores productos a nuestros clientes siempre dando precios cómodos y dando pagos por letras también, la idea de la empresa surgió un día por quien ahora es el presidente de la empresa Kelson Quispe, que viendo la necesidad de que la gente posea buenos ordenadores a buen precio y sin el temor de ser estafados lo llevo a iniciar esta empresa que a día de hoy se posiciona como una de las mejores de Arequipa, en calidad y precio, seguimos y seguiremos trabajando para que nuestra querida empresa se convierta en la número 1 en Perú, pero siempre teniendo de prioridad que el producto que se le entrega al cliente sea de la mejor calidad.</b></p>
+            </div>
+        </div>
+    </div>
+
+    <%- include('partials/footer.ejs') %>
+</body>
+</html>

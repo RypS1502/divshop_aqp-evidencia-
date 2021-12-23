@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include('partials/admin_header.ejs')%>
+    <link rel="stylesheet" href="/stylesheets/admin-products.css">
+    <title><%= title %></title>
+</head>
+<body>
+    <div class="container">
+        <%- include('partials/admin_nav.ejs') %>
+        <table class="table table-dark">
+            <thead>
+              <tr>
+                <th scope="col"><i class="fas fa-archive"></i></th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% data.forEach(function(prod){ %>
+                <tr>
+                  <td scope="row">
+                      <div class="img__cont">
+                          <img src="<%= prod.url %>" alt="" >
+                      </div>
+                  </td>
+                  <td><%= prod.name %></td>
+                  <td> S/. <%= prod.price %></td>
+                  <td><%= prod.description %></td>
+                  <td>
+                      <div class="cont_actions">
+                          <a class="btn btn-primary" href="/admin/edit/products/<%= prod._id %>">Modificar</a> <br>
+                          <a class="btn btn-danger" href="/admin/delete/products/<%= prod._id %>">Eliminar</a>
+                      </div>
+                  </td>
+                </tr>
+                <tr>
+              <% }); %>
+            </tbody>
+          </table>
+    </div>
+</body>
+</html>
